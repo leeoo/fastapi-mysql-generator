@@ -43,7 +43,8 @@ class UserCreate(UserBase):
     email: EmailStr
     password: str
     authority_id: int = 1
-    avatar: Optional[AnyHttpUrl] = None
+    # avatar: Optional[AnyHttpUrl] = None
+    avatar: Optional[str] = None
 
 
 # Properties to receive via API on update

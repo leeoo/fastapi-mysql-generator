@@ -35,5 +35,6 @@ async def add_api(
         api_info: ApiCreate,
         db: Session = Depends(deps.get_db),
 ):
-    obj_info = curd_api.create(db, api_info)
+    # obj_info = curd_api.create(db, api_info)
+    obj_info = curd_api.create(db, obj_in=api_info)
     return response_code.resp_200(data=obj_info)
